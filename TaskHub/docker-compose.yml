@@ -1,0 +1,20 @@
+version: "3.4"
+services:
+  TaskHub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+  mssql-linux:
+    image: microsoft/mssql-server-linux
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=senha123
+    volumes:
+      - mssql-data:/var/opt/mssql/data
+volumes:
+  mssql-data:
+    driver: local

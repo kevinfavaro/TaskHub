@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskHub", "TaskHub.csproj", "{2E285DC3-A2FD-4C38-9AA8-8F514325C1A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskHub.Tests", "..\TaskHub.Tests\TaskHub.Tests.csproj", "{82F62D98-0967-4E6B-ADA0-DA9E95B2CA63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E285DC3-A2FD-4C38-9AA8-8F514325C1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E285DC3-A2FD-4C38-9AA8-8F514325C1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E285DC3-A2FD-4C38-9AA8-8F514325C1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E285DC3-A2FD-4C38-9AA8-8F514325C1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F62D98-0967-4E6B-ADA0-DA9E95B2CA63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F62D98-0967-4E6B-ADA0-DA9E95B2CA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F62D98-0967-4E6B-ADA0-DA9E95B2CA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F62D98-0967-4E6B-ADA0-DA9E95B2CA63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B608DDB4-CCAD-4CA6-B49E-C843C9B249A1}
+	EndGlobalSection
+EndGlobal
