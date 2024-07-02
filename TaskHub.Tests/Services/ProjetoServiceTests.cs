@@ -37,6 +37,8 @@ namespace TaskHub.Tests
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
+                context.Database.EnsureDeleted();
+
                 var projetoService = new ProjetoService(
                     context,
                     _tarefaServiceMock.Object,
@@ -71,6 +73,8 @@ namespace TaskHub.Tests
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
+                context.Database.EnsureDeleted();
+                
                 var projetoService = new ProjetoService(
                     context,
                     _tarefaServiceMock.Object,
@@ -103,6 +107,8 @@ namespace TaskHub.Tests
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
+                context.Database.EnsureDeleted();
+
                 _usuarioProviderMock.SetupGet(p => p.UsuarioId).Returns(1);
 
                 var projetoService = new ProjetoService(
@@ -133,6 +139,8 @@ namespace TaskHub.Tests
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
+                context.Database.EnsureDeleted();
+
                 var projetoService = new ProjetoService(
                     context,
                     _tarefaServiceMock.Object,
@@ -167,6 +175,8 @@ namespace TaskHub.Tests
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
+                context.Database.EnsureDeleted();
+
                 var projetoService = new ProjetoService(
                     context,
                     _tarefaServiceMock.Object,

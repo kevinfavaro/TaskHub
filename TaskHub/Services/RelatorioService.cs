@@ -30,7 +30,7 @@ namespace TaskHub.Services
 
                 scope.Complete();
 
-                return null;
+                return result;
             }
         }
 
