@@ -24,11 +24,3 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "TaskHub.dll"]
-
-# Imagem do SQL Server
-FROM microsoft/mssql-server-windows
-ENV ACCEPT_EULA=Y
-ENV SA_PASSWORD=senha123
-EXPOSE 1433
-VOLUME /var/opt/mssql/data
-CMD ["/opt/mssql/bin/sqlserver"]
