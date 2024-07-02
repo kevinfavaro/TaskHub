@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using TaskHub.Data;
-using TaskHub.DTO;
 using TaskHub.Mapper;
 using TaskHub.Middleware;
 using TaskHub.Models;
 using TaskHub.Provider;
 using TaskHub.Services;
+using TaskHub.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,13 +13,12 @@ var services = builder.Services;
 
 services.AddHttpContextAccessor();
 
-services.AddSingleton<UsuarioProvider>();
-
-services.AddScoped<UsuarioService>();
-services.AddScoped<ProjetoService>();
-services.AddScoped<TarefaService>();
-services.AddScoped<HistoricoService>();
-services.AddScoped<ComentarioService>();
+services.AddScoped<IUsuarioProvider, UsuarioProvider>();
+services.AddScoped<IUsuarioService, UsuarioService>();
+services.AddScoped<IProjetoService, ProjetoService>();
+services.AddScoped<ITarefaService, TarefaService>();
+services.AddScoped<IHistoricoService, HistoricoService>();
+services.AddScoped<IComentarioService, ComentarioService>();
 
 services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

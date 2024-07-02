@@ -57,7 +57,7 @@ namespace TaskHub.Services
                 throw new Exception("Necessário identificar o usuário para a operação.");
             }
 
-            var CountTarefas = _context.Tarefas.Count(t =>  t.ProjetoId == projetoId);
+            var CountTarefas = _context.Tarefas.Count(t => t.ProjetoId == projetoId);
             if (CountTarefas >= _maxTarefas)
             {
                 throw new Exception($"Não é possível adicionar mais de {_maxTarefas} tarefas no projeto");
@@ -96,6 +96,8 @@ namespace TaskHub.Services
                 tarefaExistente.Descricao = tarefaAtualizada.Descricao ?? tarefaExistente.Descricao;
                 tarefaExistente.DataVencimento = tarefaAtualizada.DataVencimento ?? tarefaExistente.DataVencimento;
                 tarefaExistente.Status = tarefaAtualizada.Status ?? tarefaExistente.Status;
+
+                tarefaExistente.DataConcluido = tarefaAtualizada?.Status.Value == Enums.StatusTarefa.Concluída ? DateTime.Now : null;
 
                 _context.SaveChanges();
 

@@ -12,7 +12,7 @@ namespace TaskHub.Middleware
             _next = next;
         }
 
-        public virtual async Task InvokeAsync(HttpContext context, UsuarioProvider usuarioIdProvider)
+        public virtual async Task InvokeAsync(HttpContext context, IUsuarioProvider usuarioIdProvider)
         {
             var userId = context.Request.Headers["UsuarioId"];
 

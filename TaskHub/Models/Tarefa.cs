@@ -8,6 +8,7 @@ namespace TaskHub.Models
         public string Titulo { get; set; }
         public string? Descricao { get; set; }
         public DateTime? DataVencimento { get; set; }
+        public DateTime? DataConcluido { get; set; }
         public StatusTarefa? Status { get; set; }
         public PrioridadeTarefa Prioridade { get; set; }
         public int ProjetoId { get; set; }

@@ -1,9 +1,10 @@
 ﻿using TaskHub.Data;
 using TaskHub.Models;
+using TaskHub.Services.Interfaces;
 
 namespace TaskHub.Services
 {
-    public class UsuarioService
+    public class UsuarioService : IUsuarioService
     {
         private readonly ApplicationDbContext _context;
 
