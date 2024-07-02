@@ -19,6 +19,7 @@ services.AddScoped<IProjetoService, ProjetoService>();
 services.AddScoped<ITarefaService, TarefaService>();
 services.AddScoped<IHistoricoService, HistoricoService>();
 services.AddScoped<IComentarioService, ComentarioService>();
+services.AddScoped<IRelatorioService, RelatorioService>();
 
 services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
