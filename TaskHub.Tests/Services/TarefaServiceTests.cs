@@ -23,7 +23,7 @@ namespace TaskHub.Tests
         public TarefaServiceTests()
         {
             _options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseInMemoryDatabase(databaseName: "TestDb")
+                .UseInMemoryDatabase(databaseName: "TarefaServiceDb")
                 .Options;
 
             _historicoServiceMock = new Mock<IHistoricoService>();

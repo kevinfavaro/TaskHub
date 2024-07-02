@@ -21,7 +21,7 @@ namespace TaskHub.Tests
         public ProjetoServiceTests()
         {
             _options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseInMemoryDatabase(databaseName: "TestDb")
+                .UseInMemoryDatabase(databaseName: "ProjetoServiceDb")
                 .Options;
 
             _tarefaServiceMock = new Mock<ITarefaService>();
